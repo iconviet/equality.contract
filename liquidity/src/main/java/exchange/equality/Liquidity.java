@@ -16,31 +16,25 @@
 
 package exchange.equality;
 
-import score.Context;
-import score.annotation.External;
 import score.annotation.Payable;
+import score.annotation.External;
 
 public class Liquidity {
-    private final String name;
-
-    public Liquidity(String name) {
-        this.name = name;
-    }
-
-    @External(readonly=true)
-    public String name() {
-        return name;
-    }
-
-    @External(readonly=true)
-    public String getGreeting() {
-        String msg = "Hello " + name + "!";
-        Context.println(msg);
-        return msg;
+    
+    public Liquidity() {
     }
 
     @Payable
     public void fallback() {
-        // just receive incoming funds
+    }
+
+    @External(readonly=true)
+    public String name() {
+        return "Equality";
+    }
+
+    @External(readonly=true)
+    public String getLiquidity(String pair) {
+        return "0";
     }
 }

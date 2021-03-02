@@ -19,19 +19,17 @@ package exchange.equality;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 class AppTest {
     @Test
-    void appHasAName() {
-        final String name = "Alice";
-        Liquidity classUnderTest = new Liquidity(name);
-        assertEquals(classUnderTest.name(), name);
+    void HasName() {
+        Liquidity liquidity = new Liquidity();
+        assertEquals(liquidity.name(), "Equality");
     }
 
     @Test
-    void appHasAGreeting() {
-        Liquidity classUnderTest = new Liquidity("Alice");
-        assertNotNull(classUnderTest.getGreeting(), "app should have a greeting");
+    void HasAGreeting() {
+        Liquidity liquidity = new Liquidity();
+        assertEquals(liquidity.getLiquidity("USDT/USDB"), "0");
     }
 }

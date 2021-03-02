@@ -16,6 +16,7 @@
 
 package exchange.equality;
 
+import java.math.BigInteger;
 import score.annotation.Payable;
 import score.annotation.External;
 
@@ -30,11 +31,11 @@ public class Liquidity {
 
     @External(readonly=true)
     public String name() {
-        return "Equality";
+        return "Liquidity";
     }
 
     @External(readonly=true)
-    public String getLiquidity(String pair) {
-        return "0";
+    public BigInteger getLiquidity(String pair) {
+        return BigInteger.ZERO;
     }
 }

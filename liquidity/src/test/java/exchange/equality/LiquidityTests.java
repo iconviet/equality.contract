@@ -16,20 +16,20 @@
 
 package exchange.equality;
 
+import java.math.BigInteger;
 import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.*;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-
-class AppTest {
+class LiquidityTests {
     @Test
     void HasName() {
-        Liquidity liquidity = new Liquidity();
-        assertEquals(liquidity.name(), "Equality");
+        Liquidity score = new Liquidity();
+        assertEquals(score.name(), "Liquidity");
     }
 
     @Test
-    void HasAGreeting() {
-        Liquidity liquidity = new Liquidity();
-        assertEquals(liquidity.getLiquidity("USDT/USDB"), "0");
+    void GetLiquidity() {
+        Liquidity score = new Liquidity();
+        assertEquals(score.getLiquidity("USDT/USDB"), BigInteger.ZERO);
     }
 }
